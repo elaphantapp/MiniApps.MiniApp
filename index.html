@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <script src="./js/vue.min.js"></script>
+    <script src="./js/lodash.min.js"></script>
+    <script src="./js/minAppConfig.js"></script>
+    <link rel="stylesheet" type="text/css" href="./css/reset.css">
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+</head>
+<style type="text/css">
+    body {
+        background-color: #FDFDFD;
+    }
+    
+    .tubiao {
+        width: 64px;
+        height: 64px;
+    }
+    
+    .hang {
+        height: 80px;
+        line-height: 80px;
+    }
+    
+    .hang1 {
+        height: 80px;
+        overflow: auto;
+    }
+    
+    .name {
+        display: inline-block;
+        margin-top: 5px;
+        color: #060606;
+        font-size: 15px;
+    }
+    
+    .des {
+        color: #979797;
+        font-size: 13px;
+    }
+    
+    .des_border {
+        border-bottom: 1px solid #F0F0F0;
+    }
+    
+    .btn1 {
+        margin-top: 18px;
+        display: inline-block;
+        background-color: #F1EBF4;
+        color: #8486D0;
+        border-radius: 4px;
+        text-align: center;
+        width: 40px;
+        height: 30px;
+        line-height: 30px;
+        cursor: pointer;
+    }
+    
+    .btn2 {
+        display: inline-block;
+        background-color: #F6F6F6;
+        color: #888888;
+        margin: 5px;
+        white-space: nowrap;
+        border-radius: 4px;
+        font-size: 12px;
+        padding: 10px;
+        cursor: pointer;
+    }
+    
+    .status {
+        color: #8486D0;
+    }
+    
+    .cwidth1 {
+        width: 100%;
+    }
+    
+    .cwidth {
+        width: 400px;
+        margin: 0 auto;
+    }
+    
+    .miniApp {
+        position: fixed;
+        z-index: 9999;
+        width: 100%;
+        text-align: center;
+        color: #79B5D4;
+        bottom: 50px;
+        cursor: pointer;
+    }
+    
+    [v-cloak] {
+        display: none;
+    }
+</style>
+
+<body>
+    <div id="app" v-cloak>
+        <div style="padding:10px;margin-bottom: 30px;" :class="{cwidth:isShowPc,cwidth1:!isShowPc}">
+            <span style="float: left;color: #1B1B1B;font-size: 16px;font-weight: bold;">{{curLangule['key']}}</span><span style="float:right;color: #657D93;font-size: 16px; cursor: pointer;" @click="seeAll">{{curLangule['key3']}}</span>
+        </div>
+        <div style="clear:both"></div>
+        <div style="word-wrap:break-word;word-break:break-all;" :class="{cwidth:isShowPc,cwidth1:!isShowPc}">
+            <span v-for="(item,index) in labelArr" class="btn2" @click="sort(item,index)" :class="{status:index===curIndex}">{{curLangule[item['key']]}}</span>
+        </div>
+        <div class="container" style="margin-top: 15px;" :class="{cwidth:isShowPc,cwidth1:!isShowPc}">
+            <div class="row center-vertical" v-for="(item,index) in minAppList">
+                <div class="col-xs-3 hang"> <img :src="handleImg(item)" class="tubiao" /></div>
+                <div class="col-xs-5 des_border hang1"><span class="name">{{handleName(item)}}</span>
+                    <p class="des">{{handleDesc(item)}}</p>
+                </div>
+                <div class="col-xs-4 hang1  des_border" style="text-align:right;"><span class="btn1" @click="huoqu(item)">{{curLangule['key1']}}</span>
+                    <p style="font-size: 10px;color: #E0E0E0;margin-top: 5px;">{{curLangule['key2']}}</p>
+                </div>
+            </div>
+            <div class="row" style="height:20px"></div>
+        </div>
+        <div class="miniApp" @click="miniApp">
+            >>{{curLangule[ 'key8']}}
+            <<</div>
+        </div>
+</body>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            zh: {
+                key: '大象小应用程序',
+                key1: '获取',
+                key2: '应用内下载',
+                key3: '全部查看',
+                key4: '工具',
+                key5: '金融',
+                key6: '游戏',
+                key7: '新闻',
+                key8: '创建一个小应用'
+            },
+            en: {
+                key: 'Elaphant Mini-Apps',
+                key1: 'GET',
+                key2: 'In-App Purchases',
+                key3: 'See All',
+                key4: 'tools',
+                key5: 'finance',
+                key6: 'game',
+                key7: 'news',
+                key8: 'Create a mini-app'
+            },
+            curLanguleKey: "",
+            curLangule: {},
+            minAppList: [],
+            labelArr: [{
+                key: 'key4',
+                sortKey: 'tools'
+            }, {
+                key: 'key5',
+                sortKey: 'finance'
+            }, {
+                key: 'key6',
+                sortKey: 'game'
+            }, {
+                key: 'key7',
+                sortKey: 'news'
+            }],
+            tempMinAppList: [],
+            curIndex: '',
+            isShowPc: false
+        },
+        methods: {
+            miniApp() {
+                location.href = "https://elaphantapp.github.io/Mini-apps/";
+            },
+            seeAll() {
+                this.curIndex = "";
+                this.minAppList = _.cloneDeep(this.tempMinAppList);
+            },
+            sort(item, index) {
+                this.curIndex = index;
+                let sortKey = item.sortKey;
+                this.minAppList = _.filter(this.tempMinAppList, (o) => {
+                    return o['labels'].indexOf(item.sortKey) > -1;
+                });
+            },
+            isPC() {
+                var userAgentInfo = navigator.userAgent;
+                var Agents = ["Android", "iPhone",
+                    "SymbianOS", "Windows Phone",
+                    "iPad", "iPod"
+                ];
+                var flag = true;
+                for (var v = 0; v < Agents.length; v++) {
+                    if (userAgentInfo.indexOf(Agents[v]) > 0) {
+                        flag = false;
+                        break;
+                    }
+                }
+                return flag;
+            },
+            isWechat() {
+                var ua = navigator.userAgent.toLowerCase();
+                return /micromessenger/i.test(ua) || typeof navigator.wxuserAgent !== 'undefined';
+            },
+            huoqu(item) {
+                if (this.isWechat() || this.isPC()) {
+                    var url = item['capsule'];
+                    var turl = 'https://launch.elaphant.app?appName=Elaphant Mini-Apps&appTitle=Elaphant Mini-Apps&autoRedirect=True&redirectURL=' + encodeURIComponent(url);
+                    location.href = turl;
+                } else {
+                    location.href = item['capsule'];
+                }
+
+            },
+            handleImg(item) {
+                return './' + item['icon'];
+            },
+            handleDesc(item) {
+                let des = '';
+                if (this.curLanguleKey === 'zh') {
+                    des = item['shortDesc_zh_CN'];
+                } else {
+                    des = item['shortDesc_en'];
+                }
+                return des;
+            },
+            handleName(item) {
+                let name = '';
+                if (this.curLanguleKey === 'zh') {
+                    name = item['name_zh_CN'];
+                } else {
+                    name = item['name_en'];
+                }
+
+                return name;
+            },
+            getLanugle() {
+                this.curLangule = this.en;
+                this.curLanguleKey = 'en';
+                var JsSrc = (navigator.language || navigator.browserLanguage).toLowerCase();
+                if (JsSrc.indexOf('zh') >= 0) {
+                    // 假如浏览器语言是中文
+                    this.curLanguleKey = 'zh';
+                    this.curLangule = this.zh;
+                } else if (JsSrc.indexOf('en') >= 0) {
+                    this.curLangule = this.en;
+                    this.curLanguleKey = 'en';
+                } else {
+                    // 假如浏览器语言是其它语言
+                    this.curLangule = this.en;
+                    this.curLanguleKey = 'en';
+                }
+            },
+        },
+        created() {
+            this.isShowPc = this.isPC();
+            this.getLanugle();
+            this.minAppList = window.getMinAppConfig()["mini-apps"];
+            this.tempMinAppList = _.cloneDeep(this.minAppList);
+        }
+    });
+</script>
+
+</html>
