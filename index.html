@@ -110,7 +110,7 @@
         <div style="word-wrap:break-word;word-break:break-all;" :class="{cwidth:isShowPc,cwidth1:!isShowPc}">
             <span v-for="(item,index) in labelArr" class="btn2" @click="sort(item,index)" :class="{status:index===curIndex}">{{curLangule[item['key']]}}</span>
         </div>
-        <div class="container" style="margin-top: 15px;" :class="{cwidth:isShowPc,cwidth1:!isShowPc}">
+        <div class="container" style="margin-top: 15px" :class="{cwidth:isShowPc,cwidth1:!isShowPc}">
             <div class="row center-vertical" v-for="(item,index) in minAppList">
                 <div class="col-xs-3 hang"> <img :src="handleImg(item)" class="tubiao" /></div>
                 <div class="col-xs-5 des_border hang1"><span class="name">{{handleName(item)}}</span>
@@ -120,7 +120,7 @@
                     <p style="font-size: 10px;color: #E0E0E0;margin-top: 5px;">{{curLangule['key2']}}</p>
                 </div>
             </div>
-            <div class="row" style="height:20px"></div>
+            <div class="row" style="height:90px"></div>
         </div>
         <div class="miniApp" @click="miniApp">
             >>{{curLangule[ 'key8']}}
