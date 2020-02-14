@@ -104,9 +104,10 @@
 
 <body>
     <div id="app" v-cloak>
-        <div style="padding:10px;margin-bottom: 30px;" :class="{cwidth:isShowPc,cwidth1:!isShowPc}">
+        <div style="padding:10px;margin-bottom: 30px;" :class="{cwidth:isShowPc,cwidth1:!isShowPc}" v-if="isShowPc">
             <span style="float: left;color: #1B1B1B;font-size: 22px;font-weight: bold;">{{curLangule['key']}}</span>
         </div>
+        <div style="height:20px" v-if="!isShowPc"></div>
         <div style="clear:both"></div>
         <div style="word-wrap:break-word;word-break:break-all;padding:10px;" :class="{cwidth:isShowPc,cwidth1:!isShowPc}">
             <span v-for="(item,index) in labelArr" class="btn2" @click="sort(item,index)" :class="{status:index===curIndex}">{{curLangule[item['key']]}}</span>
