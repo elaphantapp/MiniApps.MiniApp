@@ -143,7 +143,8 @@
                 key5: '金融',
                 key6: '游戏',
                 key7: '新闻',
-                key8: '创建一个小应用'
+                key8: '创建一个小应用',
+                key9: '大象小应用',
             },
             en: {
                 key: 'Elaphant Mini-Apps',
@@ -153,7 +154,8 @@
                 key5: 'finance',
                 key6: 'game',
                 key7: 'news',
-                key8: 'Create a Mini-App'
+                key8: 'Create a Mini-App',
+                key9: 'Mini Apps',
             },
             curLanguleKey: "",
             curLangule: {},
@@ -265,6 +267,7 @@
         created() {
             this.isShowPc = this.isPC();
             this.getLanugle();
+            document.title = this.curLangule["key9"];
             this.curIndex = this.labelArr.length - 1;
             this.minAppList = window.getMinAppConfig()["mini-apps"];
             this.tempMinAppList = _.cloneDeep(this.minAppList);
