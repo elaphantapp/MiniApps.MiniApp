@@ -30,7 +30,6 @@
     
     .hang1 {
         height: 120px;
-        overflow: auto;
     }
     
     .name {
@@ -115,8 +114,11 @@
         <div class="container" style="margin-top: 5px" :class="{cwidth:isShowPc,cwidth1:!isShowPc}">
             <div class="row center-vertical" v-for="(item,index) in minAppList">
                 <div class="col-xs-3 hang"> <img :src="handleImg(item)" class="tubiao" /></div>
-                <div class="col-xs-6 des_border hang1"><span class="name">{{handleName(item)}}</span>
-                    <p class="des">{{handleDesc(item)}}</p>
+                <div class="col-xs-6 des_border hang1">
+                    <div style="height:112px;overflow:auto;">
+                        <span class="name">{{handleName(item)}}</span>
+                        <p class="des">{{handleDesc(item)}}</p>
+                    </div>
                 </div>
                 <div class="col-xs-3 hang  des_border" style="text-align:left"><span class="btn1" @click="huoqu(item)">{{curLangule['key1']}}</span>
                 </div>
