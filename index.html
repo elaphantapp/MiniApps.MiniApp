@@ -133,6 +133,9 @@
         <div style="height:20px"></div>
 </body>
 <script>
+    window.$Fingerprint2 = Fingerprint2;
+</script>
+<script>
     var app = new Vue({
         el: '#app',
         data: {
@@ -264,13 +267,18 @@
                     this.curLanguleKey = 'en';
                 }
             },
+            randomsort(a, b) {
+                return Math.random() > 0.5 ? -1 : 1; //通过随机产生0到1的数，然后判断是否大于0.5从而影响排序，产生随机性的效果。
+            }
         },
         created() {
             this.isShowPc = this.isPC();
             this.getLanugle();
             document.title = this.curLangule["key9"];
             this.curIndex = this.labelArr.length - 1;
-            this.minAppList = window.getMinAppConfig()["mini-apps"];
+
+            let arr = window.getMinAppConfig()["mini-apps"];
+            this.minAppList = arr.sort(this.randomsort);
             this.tempMinAppList = _.cloneDeep(this.minAppList);
         }
     });
