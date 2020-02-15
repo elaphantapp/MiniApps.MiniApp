@@ -1,4 +1,4 @@
-# Only One Click publish your mini App
+# Only One Click publish your mini App ([中文版](./README_CN.md))
 
 Publish your mini app only need one step: 
 
