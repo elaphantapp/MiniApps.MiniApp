@@ -13,6 +13,7 @@
     <script src="./js/vue.min.js"></script>
     <script src="./js/lodash.min.js"></script>
     <script src="./js/minAppConfig.js?version=1.0.0"></script>
+    <script src="./js/fingerprint2.js"></script>
     <link rel="stylesheet" type="text/css" href="./css/reset.css">
     <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
 </head>
@@ -280,10 +281,37 @@
             this.getLanugle();
             document.title = this.curLangule["key9"];
             this.curIndex = this.labelArr.length - 1;
+            window.$Fingerprint2.get((components) => {
+                let murmur = Fingerprint2.x64hash128(components.map(function(pair) {
+                    return pair.value
+                }).join(), 31);
 
-            let arr = window.getMinAppConfig()["mini-apps"];
-            this.minAppList = arr.sort(this.randomsort);
-            this.tempMinAppList = _.cloneDeep(this.minAppList);
+                let key = murmur + '-miniApps';
+                let content = localStorage.getItem(key) || "";
+                if (content === '') {
+                    let obj = window.getMinAppConfig()
+                    let arr = obj["mini-apps"];
+                    this.minAppList = arr.sort(this.randomsort);
+                    this.tempMinAppList = _.cloneDeep(this.minAppList);
+                    localStorage.setItem(key, JSON.stringify(obj));
+                } else {
+                    let obj = JSON.parse(content);
+                    let oldVer = obj.versioin;
+                    let newVer = window.getMinAppConfig().versioin;
+                    if (newVer > oldVer) {
+                        let obj = window.getMinAppConfig()
+                        let arr = obj["mini-apps"];
+                        this.minAppList = arr.sort(this.randomsort);
+                        this.tempMinAppList = _.cloneDeep(this.minAppList);
+                        localStorage.setItem(key, JSON.stringify(obj));
+                    } else {
+                        this.minAppList = obj["mini-apps"];
+                        this.tempMinAppList = _.cloneDeep(this.minAppList);
+                    }
+                }
+
+            });
+
         }
     });
 </script>
