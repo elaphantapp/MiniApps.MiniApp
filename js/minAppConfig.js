@@ -129,5 +129,3 @@ var minAppConfig = {
 window.getMinAppConfig = function getMinAppConfig() {
     return this.minAppConfig;
 };
-
-console.log(this.getMinAppConfig());
