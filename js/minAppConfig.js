@@ -1,5 +1,5 @@
 var minAppConfig = {
-    "version": 3,
+    "version": 4,
     "mini-apps": [{
             "name": "Vote For Me",
             "name_en": "Vote For Me",
@@ -130,7 +130,7 @@ var minAppConfig = {
             "shortDesc_en": "ELA Guess is interesting game based on classic word-guessing. it test your comprehensive knowledge",
             "shortDesc_zh_CN": "Ela想不到 是一个基于经典玩法的猜字游戏。这款游戏可以检查您的综合知识水平。",
             "icon": "images/ElaGuess.png",
-            "capsule": "https://www.homelong.cn/ElaGame/ElaGame/elaguess.capsule",
+            "capsule": "elaphant://www.homelong.cn/ElaGame/ElaGame/elaguess.capsule",
             "labels": ["game"]
         }
     ]
