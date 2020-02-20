@@ -123,12 +123,12 @@ var minAppConfig = {
         }
         ,
         {
-            "name": "ELAGuess",
+            "name": "Ela想不到",
             "name_en": "ELAGuess",
-            "name_zh_CN": "ELAGuess",
+            "name_zh_CN": "Ela想不到",
             "shortDesc": "ELA Guess is interesting game based on classic word-guessing.it test your comprehensive knowledge.",
             "shortDesc_en": "ELA Guess is interesting game based on classic word-guessing. it test your comprehensive knowledge",
-            "shortDesc_zh_CN": "ELA Guess是一个基于经典玩法的猜字游戏。这款游戏可以检查您的综合知识水平。",
+            "shortDesc_zh_CN": "Ela想不到 是一个基于经典玩法的猜字游戏。这款游戏可以检查您的综合知识水平。",
             "icon": "images/ElaGuess.png",
             "capsule": "https://www.homelong.cn/ElaGame/ElaGame/elaguess.capsule",
             "labels": ["game"]
