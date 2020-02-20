@@ -1,5 +1,5 @@
 var minAppConfig = {
-    "version": 2,
+    "version": 3,
     "mini-apps": [{
             "name": "Vote For Me",
             "name_en": "Vote For Me",
