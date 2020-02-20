@@ -296,8 +296,8 @@
                     localStorage.setItem(key, JSON.stringify(obj));
                 } else {
                     let obj = JSON.parse(content);
-                    let oldVer = obj.versioin;
-                    let newVer = window.getMinAppConfig().versioin;
+                    let oldVer = obj.version;
+                    let newVer = window.getMinAppConfig().version;
                     if (newVer > oldVer) {
                         let obj = window.getMinAppConfig()
                         let arr = obj["mini-apps"];
