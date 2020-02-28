@@ -1,5 +1,5 @@
 var minAppConfig = {
-    "version": 4,
+    "version": 5,
     "mini-apps": [{
             "name": "Vote For Me",
             "name_en": "Vote For Me",
@@ -132,6 +132,18 @@ var minAppConfig = {
             "icon": "images/ElaGuess.png",
             "capsule": "elaphant://www.homelong.cn/ElaGame/ElaGame/elaguess.capsule",
             "labels": ["game"]
+        }
+        ,
+        {
+            "name": "Alliance Staking",
+            "name_en": "Alliance Staking",
+            "name_zh_CN": "Alliance权益联盟投票挖矿",
+            "shortDesc": "Provide the highest return",
+            "shortDesc_en": "Provide the highest return",
+            "shortDesc_zh_CN": "投票挖矿，永享最高收益！",
+            "icon": "images/elalliancestaking.png",
+            "capsule": "elaphant://elalliance.net/api/elalliance.capsule",
+            "labels": ["finance", "tools"]
         }
     ]
 };
