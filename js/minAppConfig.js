@@ -1,5 +1,5 @@
 var minAppConfig = {
-    "version": 5,
+    "version": 6,
     "mini-apps": [{
             "name": "Vote For Me",
             "name_en": "Vote For Me",
@@ -135,9 +135,9 @@ var minAppConfig = {
         }
         ,
         {
-            "name": "Alliance Staking",
-            "name_en": "Alliance Staking",
-            "name_zh_CN": "Alliance权益联盟投票挖矿",
+            "name": "ELAlliance Staking",
+            "name_en": "ELAlliance Staking",
+            "name_zh_CN": "权益联盟投票挖矿",
             "shortDesc": "Provide the highest return",
             "shortDesc_en": "Provide the highest return",
             "shortDesc_zh_CN": "投票挖矿，永享最高收益！",
