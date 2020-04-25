@@ -144,6 +144,17 @@ var minAppConfig = {
             "icon": "images/elalliancestaking.png",
             "capsule": "elaphant://elalliance.net/api/elalliance.capsule",
             "labels": ["finance", "tools"]
+        },
+        {
+            "name": "CR Voting",
+            "name_en": "CR Voting",
+            "name_zh_CN": "CR投票",
+            "shortDesc": "You can see the CR candidates list and vote them.",
+            "shortDesc_en": "You can see the CR candidates list and vote them.",
+            "shortDesc_zh_CN": "查看CR候选人列表，并为CR候选人投票。",
+            "icon": "images/crlogo.png",
+            "capsule": "elaphant://crvoting.elaphant.app/crvoting.capsule",
+            "labels": ["tools"]
         }
     ]
 };
