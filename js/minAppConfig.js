@@ -1,5 +1,5 @@
 var minAppConfig = {
-    "version": 7,
+    "version": 8,
     "mini-apps": [{
             "name": "Vote For Me",
             "name_en": "Vote For Me",
@@ -155,6 +155,17 @@ var minAppConfig = {
             "icon": "images/crlogo.png",
             "capsule": "elaphant://crvoting.elaphant.app/crvoting.capsule",
             "labels": ["tools"]
+        },
+        {
+            "name": "Ploutoz",
+            "name_en": "Ploutoz",
+            "name_zh_CN": "Ploutoz",
+            "shortDesc": "",
+            "shortDesc_en": "",
+            "shortDesc_zh_CN": "",
+            "icon": "images/plo.png",
+            "capsule": "elaphant://elaphant.app/ploutoz.capsule",
+            "labels": ["finance"]
         }
     ]
 };
