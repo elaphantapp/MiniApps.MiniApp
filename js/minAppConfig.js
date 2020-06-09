@@ -1,5 +1,5 @@
 var minAppConfig = {
-    "version": 8,
+    "version": 9,
     "mini-apps": [{
             "name": "Vote For Me",
             "name_en": "Vote For Me",
@@ -160,9 +160,9 @@ var minAppConfig = {
             "name": "Ploutoz",
             "name_en": "Ploutoz",
             "name_zh_CN": "Ploutoz",
-            "shortDesc": "",
-            "shortDesc_en": "",
-            "shortDesc_zh_CN": "",
+            "shortDesc": "ELA-margined For BTC Future Trading is now live on PLO!",
+            "shortDesc_en": "ELA-margined For BTC Future Trading is now live on PLO!",
+            "shortDesc_zh_CN": "菠萝全币种合约可用ELA做保证金开BTC合约",
             "icon": "images/plo.png",
             "capsule": "elaphant://elaphant.app/ploutoz.capsule",
             "labels": ["finance"]
