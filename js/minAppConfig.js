@@ -1,5 +1,5 @@
 var minAppConfig = {
-    "version": 9,
+    "version": 10,
     "mini-apps": [{
             "name": "Vote For Me",
             "name_en": "Vote For Me",
@@ -166,6 +166,17 @@ var minAppConfig = {
             "icon": "images/plo.png",
             "capsule": "elaphant://elaphant.app/ploutoz.capsule",
             "labels": ["finance"]
+        },
+        {
+            "name": "ELA Message",
+            "name_en": "ELA Message",
+            "name_zh_CN": "ELA留言机",
+            "shortDesc": "You can use ELA to leave a message to your CryptoName friends,",
+            "shortDesc_en": "You can use ELA to leave a message to your CryptoName friends,",
+            "shortDesc_zh_CN": "你可以用ELA给你的CryptoName朋友发送留言",
+            "icon": "images/elamsg.png",
+            "capsule": "elaphant://elamessage.elaphant.app/elamessage.capsule",
+            "labels": ["tools"]
         }
     ]
 };
