@@ -175,7 +175,7 @@ var minAppConfig = {
             "shortDesc_en": "You can use ELA to leave a message to your CryptoName friends,",
             "shortDesc_zh_CN": "你可以用ELA给你的CryptoName朋友发送留言",
             "icon": "images/elamsg.png",
-            "capsule": "elaphant://elamessage.elaphant.app/elamessage.capsule",
+            "capsule": "elaphant://elamessenger.elaphant.app/elamessenger.capsule",
             "labels": ["tools"]
         }
     ]
