@@ -1,5 +1,5 @@
 var minAppConfig = {
-    "version": 10,
+    "version": 11,
     "mini-apps": [{
             "name": "Vote For Me",
             "name_en": "Vote For Me",
@@ -168,8 +168,8 @@ var minAppConfig = {
             "labels": ["finance"]
         },
         {
-            "name": "ELA Message",
-            "name_en": "ELA Message",
+            "name": "ELA Messenger",
+            "name_en": "ELA Messenger",
             "name_zh_CN": "ELA留言机",
             "shortDesc": "You can use ELA to leave a message to your CryptoName friends,",
             "shortDesc_en": "You can use ELA to leave a message to your CryptoName friends,",
