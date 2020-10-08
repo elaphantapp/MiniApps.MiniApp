@@ -1,16 +1,6 @@
 var minAppConfig = {
-    "version": 12,
-    "mini-apps": [{
-            "name": "Vote For Me",
-            "name_en": "Vote For Me",
-            "name_zh_CN": "给我投票",
-            "shortDesc": "A mini voting program, you can create a topic for voting, you can vote your favorite options.",
-            "shortDesc_en": "A mini voting program, you can create a topic for voting, you can vote your favorite options.",
-            "shortDesc_zh_CN": "一个投票小程序，您可以创建一个投票主题；也可以去给你支持的选项投票。",
-            "icon": "images/voteforme.png",
-            "capsule": "elaphant://voteforme.elaphant.net/voteforme.capsule",
-            "labels": ["tools"]
-        },
+    "version": 13,
+    "mini-apps": [
         {
             "name": "ELA Bank vote",
             "name_en": "ELA Bank vote wins reward",
@@ -43,17 +33,6 @@ var minAppConfig = {
             "icon": "images/icon.jpg",
             "capsule": "elaphant://dposvote.elaphant.app/vote.capsule",
             "labels": ["tools"]
-        },
-        {
-            "name": "elapp.org",
-            "name_en": "Community",
-            "name_zh_CN": "社区中心",
-            "shortDesc": "Discuss the dApps and ideas.",
-            "shortDesc_en": "Discuss the dApps and ideas.",
-            "shortDesc_zh_CN": "大家讨论DApp和创意的地方",
-            "icon": "images/elapp.png",
-            "capsule": "elaphant://elaphant.app/elapp.capsule",
-            "labels": ["media", "news"]
         },
         {
             "name": "ELA News",
@@ -120,30 +99,6 @@ var minAppConfig = {
             "icon": "images/trade.png",
             "capsule": "elaphant://easycollect.elabank.net/EasyTrade.capsule",
             "labels": ["tools"]
-        }
-        ,
-        {
-            "name": "Ela想不到",
-            "name_en": "ELAGuess",
-            "name_zh_CN": "Ela想不到",
-            "shortDesc": "ELA Guess is interesting game based on classic word-guessing.it test your comprehensive knowledge.",
-            "shortDesc_en": "ELA Guess is interesting game based on classic word-guessing. it test your comprehensive knowledge",
-            "shortDesc_zh_CN": "Ela想不到 是一个基于经典玩法的猜字游戏。这款游戏可以检查您的综合知识水平。",
-            "icon": "images/ElaGuess.png",
-            "capsule": "elaphant://www.homelong.cn/ElaGame/ElaGame/elaguess.capsule",
-            "labels": ["game"]
-        }
-        ,
-        {
-            "name": "ELAlliance Staking",
-            "name_en": "ELAlliance Staking",
-            "name_zh_CN": "权益联盟投票挖矿",
-            "shortDesc": "Provide the highest return",
-            "shortDesc_en": "Provide the highest return",
-            "shortDesc_zh_CN": "投票挖矿，永享最高收益！",
-            "icon": "images/elalliancestaking.png",
-            "capsule": "elaphant://elalliance.net/api/elalliance.capsule",
-            "labels": ["finance", "tools"]
         },
         {
             "name": "CR Voting",
