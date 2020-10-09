@@ -1,5 +1,5 @@
 var minAppConfig = {
-    "version": 13,
+    "version": 14,
     "mini-apps": [
         {
             "name": "ELA Bank vote",

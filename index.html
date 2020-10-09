@@ -230,14 +230,7 @@
                 return /micromessenger/i.test(ua) || typeof navigator.wxuserAgent !== 'undefined';
             },
             huoqu(item) {
-                if (this.isWechat() || this.isPC()) {
-                    var url = item['capsule'];
-                    var turl = 'https://launch.elaphant.app?appName=Elaphant Mini-Apps&appTitle=Elaphant Mini-Apps&autoRedirect=True&redirectURL=' + encodeURIComponent(url);
-                    location.href = turl;
-                } else {
-                    location.href = item['capsule'];
-                }
-
+                location.href = item['url'];
             },
             handleImg(item) {
                 return './' + item['icon'];
