@@ -10,6 +10,7 @@ var minAppConfig = {
             "shortDesc_zh_CN": "一键投票给托管在ELA Bank的高收益DPos节点，可以赢取ELA奖励啦！ELA Bank会按非常透明、可信的分配公式代节点发放奖励！",
             "icon": "images/elabank.png",
             "capsule": "elaphant://elabank.net/capsule/voting.capsule",
+            "url": "https://elabank.net",
             "labels": ["finance", "tools"]
         },
         {
@@ -21,6 +22,7 @@ var minAppConfig = {
             "shortDesc_zh_CN": "使用ELA红包小程序，你可以给好友发ELA红包啦！",
             "icon": "images/redpacket.jpg",
             "capsule": "elaphant://redpacket.elastos.org/redpacket.capsule",
+            "url": "https://redpacket.elastos.org",
             "labels": ["finance", "tools"]
         },
         {
@@ -32,6 +34,7 @@ var minAppConfig = {
             "shortDesc_zh_CN": "查看并为DPoS节点投票。您不必将ELA转出钱包，同时还可以正常进行转账交易。",
             "icon": "images/icon.jpg",
             "capsule": "elaphant://dposvote.elaphant.app/vote.capsule",
+            "url": "https://dposvote.elaphant.app",
             "labels": ["tools"]
         },
         {
@@ -43,6 +46,7 @@ var minAppConfig = {
             "shortDesc_zh_CN": "ELA新闻是关于Elastos的所有信息和更新的全方位网站。",
             "icon": "images/elanews.png",
             "capsule": "elaphant://elanews.net/ELANews01.capsule",
+            "url": "https://elanews.net",
             "labels": ["news"]
         },
         {
@@ -54,6 +58,7 @@ var minAppConfig = {
             "shortDesc_zh_CN": "ELA Fish是一个著名的社区游戏，你可以在这里养鱼和交易鱼。",
             "icon": "images/elafish.png",
             "capsule": "elaphant://play.fishchain.io/res/fishchain.capsule",
+            "url": "https://play.fishchain.io",
             "labels": ["game"]
         },
         {
@@ -65,6 +70,7 @@ var minAppConfig = {
             "shortDesc_zh_CN": "一站式提供超级节点的各种信息，包括DPoS和CRC委员。",
             "icon": "images/starfish.png",
             "capsule": "elaphant://elanodes.com/capsules/1.2.capsule",
+            "url": "https://elanodes.com",
             "labels": ["tools"]
         },
         {
@@ -76,6 +82,7 @@ var minAppConfig = {
             "shortDesc_zh_CN": "来自SWFT团队，你可以用这个工具在钱包里交换加密货币。",
             "icon": "images/swft.png",
             "capsule": "elaphant://swft.elabank.net/swft.capsule",
+            "url": "https://swft.elabank.net",
             "labels": ["tools", "finance"]
         },
         {
@@ -87,6 +94,7 @@ var minAppConfig = {
             "shortDesc_zh_CN": "支持ELA主链和侧链快速跨链转账。",
             "icon": "images/transfer.png",
             "capsule": "elaphant://transfer.elaphant.app/transfer.capsule",
+            "url": "https://transfer.elaphant.app",
             "labels": ["tools"]
         },
         {
@@ -98,6 +106,7 @@ var minAppConfig = {
             "shortDesc_zh_CN": "这是一个支持买卖双方的交易工具。卖方可以收到他想要的币种，而买方可以用不同的币种付款。",
             "icon": "images/trade.png",
             "capsule": "elaphant://easycollect.elabank.net/EasyTrade.capsule",
+            "url": "https://easycollect.elabank.net",
             "labels": ["tools"]
         },
         {
@@ -109,6 +118,7 @@ var minAppConfig = {
             "shortDesc_zh_CN": "查看CR候选人列表，并为CR候选人投票。",
             "icon": "images/crlogo.png",
             "capsule": "elaphant://crvoting.elaphant.app/crvoting.capsule",
+            "url": "https://crvoting.elaphant.app",
             "labels": ["tools"]
         },
         {
@@ -120,6 +130,7 @@ var minAppConfig = {
             "shortDesc_zh_CN": "菠萝全币种合约可用ELA做保证金开BTC合约",
             "icon": "images/plo.png",
             "capsule": "elaphant://elaphant.app/ploutoz.capsule",
+            "url": "https://plo.one/mobile",
             "labels": ["finance"]
         },
         {
@@ -131,6 +142,7 @@ var minAppConfig = {
             "shortDesc_zh_CN": "你可以用ELA给你的CryptoName朋友发送留言",
             "icon": "images/elamsg.png",
             "capsule": "elaphant://elamessenger.elaphant.app/elamessenger.capsule",
+            "url": "https://elamessenger.elaphant.app",
             "labels": ["tools"]
         }
     ]
