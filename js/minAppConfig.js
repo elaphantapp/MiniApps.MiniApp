@@ -1,5 +1,5 @@
 var minAppConfig = {
-    "version": 14,
+    "version": 15,
     "mini-apps": [
         {
             "name": "ELA Bank vote",
@@ -10,7 +10,7 @@ var minAppConfig = {
             "shortDesc_zh_CN": "一键投票给托管在ELA Bank的高收益DPos节点，可以赢取ELA奖励啦！ELA Bank会按非常透明、可信的分配公式代节点发放奖励！",
             "icon": "images/elabank.png",
             "capsule": "elaphant://elabank.net/capsule/voting.capsule",
-            "url": "https://elabank.net",
+            "url": "https://elabank.net/voting",
             "labels": ["finance", "tools"]
         },
         {
